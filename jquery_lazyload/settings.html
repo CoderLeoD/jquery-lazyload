@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>settings</title>
+</head>
+<body>
+  <h1>本文件演示1.9.3版本中lazyload()方法所有配置选项</h1>
+</body>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/jquery.lazyload.js"></script>
+<script>
+
+$(function() {
+  $('img.lazy').lazyload({
+    // threshold: 提前开始加载高度.
+    threshold: 200,
+    // failure_limit: 同 failurelimit
+    failure_limit: 10,
+    // event: 设置何种事件触发时才加载, 默认 scroll
+    event: 'click',
+    // effect: 使用何种载入效果
+    effect: "fadeIn",
+    // container: 对某容器中的图片实现效果
+    container: $("#container"),
+    // data_attribute: 用于设置 lazyload 操作的自定义属性(data-后面的属性名)
+    data_attribute : "attr",
+    // skip_invisible: 是否 不加载不可见图片. true 不加载, false 加载.
+    skip_invisible : false,
+    // appear: 用于在图片加载之前到显示图片之间的处理函数，一般用于展示加载动画.
+    appear: function() {},
+    // load: 用于图片加载完毕之后执行的函数.
+    load: function() {},
+    // placeholder: 设置占位图片路径
+    placeholder : "img/lazy.gif",
+    // failurelimit: 一次加载图片的张数(图片排序混乱时使用)
+    failurelimit : 10,
+    // effectspeed: 设置动画持续时长, 单位毫秒
+    effectspeed : 1000,
+  });
+});
+
+</script>
+</html>

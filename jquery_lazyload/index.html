@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    #container {
+      width: 765px;
+      margin: auto;
+    }
+    #container img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img class="lazy" data-original="./image/img1.jpg" alt="">
+    <img class="lazy" data-original="./image/img2.jpg" alt="">
+    <img class="lazy" data-original="./image/img3.jpg" alt="">
+    <img class="lazy" data-original="./image/img4.jpg" alt="">
+    <img class="lazy" data-original="./image/img5.jpg" alt="">
+    <img class="lazy" data-original="./image/img6.jpg" alt="">
+  </div>
+</body>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/jquery.lazyload.js"></script>
+<script>
+
+$(function() {
+  $('img.lazy').lazyload({ effect: "fadeIn" });
+});
+
+</script>
+</html>
